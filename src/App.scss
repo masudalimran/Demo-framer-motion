@@ -1,0 +1,174 @@
+.app__container {
+  background: radial-gradient(rgb(211, 104, 206) 1px, purple);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.app__header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1rem;
+  gap: 1rem;
+  .app__pizza-logo {
+    height: 70px;
+    width: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  .app__heading-container {
+    flex: 1;
+  }
+}
+
+.app__content {
+  flex: 1;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .app__content-box {
+    padding: 3rem;
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    h1 {
+      font-weight: 100;
+    }
+
+    .app__content-btn-disabled {
+      margin-top: 2rem;
+      // border: 1px solid #999999;
+      padding: 1rem 2rem;
+      // border-radius: 2.5rem;
+      // background-color: #cccccc;
+      // color: #666666;
+      // font-size: max(1rem, 2vh);
+      height: 75px;
+    }
+
+    h4 {
+      font-size: 1.5rem;
+    }
+    h3 {
+      font-size: 1.5rem;
+      text-align: center;
+    }
+    p {
+      margin-top: 1rem;
+      text-align: center;
+      span {
+        color: yellow;
+      }
+    }
+    .app__content-selection {
+      ul {
+        margin-top: 1rem;
+        li {
+          list-style: none;
+          margin: 1rem 1rem;
+          cursor: pointer;
+          // &:hover {
+          //   scale: 1.02;
+          //   transition: all 0.3s ease;
+          //   color: rgba(231, 224, 224, 0.808);
+          // }
+        }
+      }
+    }
+    .app__content-place-order {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: items;
+      ul {
+        margin-top: 1rem;
+        li {
+          text-align: center;
+          list-style: none;
+          margin: 1rem 1rem;
+        }
+      }
+    }
+    @media screen and (max-width: 450px) {
+      padding: 3rem;
+    }
+
+    @media screen and (max-width: 2000px) {
+      padding: 20% 40%;
+    }
+  }
+}
+
+.app__content-btn {
+  margin-top: 2rem;
+  border: 1px solid white;
+  padding: 1rem 2rem;
+  border-radius: 2.5rem;
+  background-color: transparent;
+  color: white;
+  font-size: max(1rem, 2vh);
+  height: 75px;
+  cursor: pointer;
+  &:hover {
+    scale: 0.95;
+    transition: all 0.3s ease;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.app__content-btn-newsletter {
+  margin-top: 2rem;
+  border: 1px solid black;
+  padding: 1rem 2rem;
+  border-radius: 2.5rem;
+  background-color: yellowgreen;
+  color: black;
+  font-size: max(1rem, 2vh);
+  height: 75px;
+  cursor: pointer;
+  &:hover {
+    scale: 0.95;
+    transition: all 0.3s ease;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app__modal-container {
+  height: 300px;
+  width: 300px;
+  background-color: white;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  h1 {
+    color: black;
+    text-align: center;
+  }
+  p {
+    color: black;
+    margin-top: 1rem;
+    text-decoration: underline;
+    cursor: pointer;
+    &:hover {
+      color: blue;
+    }
+  }
+}
